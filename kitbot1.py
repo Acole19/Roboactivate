@@ -26,8 +26,8 @@ if rpl.readDistance(1) < 30:
 elif rpl.readDistance(0) < 30:
     turn_right()
     start_time=time.time()
-        if time.time - start_time > 3:
-            cease()
+    if time.time - start_time > 3:
+        cease()
 else:
     turn_left()
     turn_right()
