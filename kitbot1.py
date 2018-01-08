@@ -1,5 +1,4 @@
 import RoboPiLib as RPL
-import setup
 import time
 def cease():
     exit(0)
