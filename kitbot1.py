@@ -2,6 +2,7 @@ import RoboPiLib as RPL
 import time
 def cease():
     exit(0)
+RPL.RoboPiInit("/dev/ttyAMA0",115200)
 RPL.digitalWrite(18,1)
 RPL.digitalWrite(20,0)
 RPL.servowrite(1,0)
