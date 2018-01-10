@@ -275,19 +275,19 @@ def cease():
 RoboPiInit("/dev/ttyAMA0",115200)
 digitalWrite(18,1)
 digitalWrite(20,0)
-servowrite(1,0)
-servowrite(0,0)
+servoWrite(1,0)
+servoWrite(0,0)
 def stop():
-    servowrite(0,0)
-    servowrite(1,0)
+    servoWrite(0,0)
+    servoWrite(1,0)
 def hard_turn_left():
-    servowrite(0,1500)
+    servoWrite(0,1500)
 def turn_left():
-    servowrite(0,1000)
+    servoWrite(0,1000)
 def turn_right():
-    servowrite(1,1000)
+    servoWrite(1,1000)
 def hard_turn_right():
-    servowrite(1,1500)
+    servoWrite(1,1500)
 while True:
     if readDistance(1) < 30:
         turn_left()
