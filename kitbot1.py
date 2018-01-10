@@ -20,14 +20,15 @@ def hard_turn_right():
     rpl.servowrite(1,1500)
 if rpl.readDistance(1) < 30:
     turn_left()
-    start_time=time.time()
-    if time.time - start_time > 3:
+    start_time = time.time()
+    if time.time - start_time > 3 and rpl.readDistance(1) < 30:
         cease()
 elif rpl.readDistance(0) < 30:
     turn_right()
     start_time=time.time()
-    if time.time - start_time > 3:
-        cease()
+    if time.time - start_time > 3 and rpl.readDistance(1) < 30:
+            cease()
+   
 else:
     turn_left()
     turn_right()
