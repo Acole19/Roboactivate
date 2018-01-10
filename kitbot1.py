@@ -306,3 +306,6 @@ if command == "Initialize":
         else:
             turn_left()
             turn_right()
+            halt = raw_input("> ")
+            if halt == "Halt":
+                cease()
