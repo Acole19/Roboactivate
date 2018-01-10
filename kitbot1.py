@@ -288,18 +288,21 @@ def turn_right():
     servoWrite(1,1000)
 def hard_turn_right():
     servoWrite(1,1500)
-while True:
-    if readDistance(1) < 30:
-        turn_left()
-        start_time = time.time()
-        if time.time - start_time > 3 and readDistance(1) < 30:
-            cease()
-    elif readDistance(0) < 30:
-        turn_right()
-        start_time=time.time()
-        if time.time - start_time > 3 and readDistance(1) < 30:
-            cease()
+print "Input command"
+command = raw_input("> ")
+if command == "Initialize":
+    while True:
+        if readDistance(1) < 30:
+            turn_left()
+            start_time = time.time()
+            if time.time - start_time > 3 and readDistance(1) < 30:
+                cease()
+        elif readDistance(0) < 30:
+            turn_right()
+            start_time=time.time()
+            if time.time - start_time > 3 and readDistance(1) < 30:
+                cease()
 
-    else:
-        turn_left()
-        turn_right()
+        else:
+            turn_left()
+            turn_right()
