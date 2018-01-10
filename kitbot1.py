@@ -1,8 +1,8 @@
 import RoboPiLib as RPL
-import setup
 import time
 def cease():
     exit(0)
+RPL.RoboPiInit("/dev/ttyAMA0",115200)
 RPL.digitalWrite(18,1)
 RPL.digitalWrite(20,0)
 RPL.servowrite(1,0)
@@ -26,8 +26,9 @@ if rpl.readDistance(1) < 30:
 elif rpl.readDistance(0) < 30:
     turn_right()
     start_time=time.time()
-        if time.time - start_time > 3 and rpl.readDistance(1) < 30:
+    if time.time - start_time > 3 and rpl.readDistance(1) < 30:
             cease()
+   
 else:
     turn_left()
     turn_right()
