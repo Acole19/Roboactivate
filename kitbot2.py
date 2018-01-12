@@ -7,7 +7,7 @@ RPL.digitalWrite(18,1)
 RPL.digitalWrite(20,0)
 RPL.servoWrite(1,0)
 RPL.servoWrite(0,0)
-motorr =
+motorr = 1
 def stop():
     RPL.servoWrite(0,0)
     RPL.servoWrite(1,0)
