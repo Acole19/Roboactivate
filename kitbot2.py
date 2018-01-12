@@ -7,6 +7,7 @@ RPL.digitalWrite(18,1)
 RPL.digitalWrite(20,0)
 RPL.servoWrite(1,0)
 RPL.servoWrite(0,0)
+motorr =
 def stop():
     RPL.servoWrite(0,0)
     RPL.servoWrite(1,0)
@@ -25,12 +26,12 @@ if command == "Initialize":
         if RPL.readDistance(1) < 30:
             turn_left()
             start_time = time.time()
-            if time.time - start_time > 3 and RPL.readDistance(1) < 30:
+            if time.time - start_time > 3 and RPL.readDistance(1) > 30:
                 cease()
         elif readDistance(0) < 30:
             turn_right()
             start_time=time.time()
-            if time.time - start_time > 3 and RPL.readDistance(1) < 30:
+            if time.time - start_time > 3 and RPL.readDistance(1) > 30:
                 cease()
 
         else:
