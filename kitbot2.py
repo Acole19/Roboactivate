@@ -1,4 +1,4 @@
-import ~/robotonomy/RoboPiLib as RPL
+import RoboPiLib as RPL
 import time
 def cease():
     exit(0)
